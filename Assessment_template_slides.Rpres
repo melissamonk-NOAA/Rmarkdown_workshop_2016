@@ -4,14 +4,14 @@ author: Melissa Monk
 date: October 2016
 autosize: true
 
-First Slide
+Workshop Goals
 ========================================================
 
-For more details on authoring R presentations please visit <https://support.rstudio.com/hc/en-us/articles/200486468>.
+Become familiar with the Assessment Document Template and Git
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+- Getting started with Git and examples
+- R markdown basics and examples
+- Assessment Document Template
 
 Slide With Code
 ========================================================

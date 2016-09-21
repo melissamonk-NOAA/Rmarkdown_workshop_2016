@@ -1,61 +1,112 @@
-Assessment Template
+How to Use the Assessment Template 
 ========================================================
 author: Melissa Monk
 date: October 2016
 autosize: true
 
-The YAML continued
+Assessment Template: The Details
 ========================================================
-The YAML for the Assessment template includes additional options
-Each line is described in the ReadME file
-```
----
-title: 'Status of Blue Rockfish (*Sebastes mystinus*) Along the U.S. Pacific Coast in x2015x'
-author: ''
-date: ''
-output:
-  pdf_document:
-    fig_caption: yes
-    highlight: haddock
-    includes:
-      before_body: Titlepage.tex
-      in_header: header.tex
-    keep_tex: yes
-    latex_engine: xelatex
-    template: Default_template_modified.tex
-    number_sections: yes
-    toc: yes
-    toc_depth: 4
-  html_document:
-    toc: yes
-  word_document: default
+We'll walk through 
+
+- How to get a copy of the repo
+
+- How to incorporate your assessment
+
+- Major sections of the document
+
+- Iserting tables
+  - via R code chunks and txt files
+  
+- Inserting figures
+  - via r4SS output and image files
+  
+- Literature cited
+
+
+Create your assessment repository
+========================================================
+From your GitHub account, click Repositories
+
+Click the green "New" button
+
+![](Github_home.jpg)
+
+
+Create your assessment repository
+========================================================
+Name the new repository something intuitive such as CASCORP2017
+
+Leave the repo as public unless you plan to use a private repo
+
+Check the "Initialize this repository with a README"
+![](Github_new.jpg)
+
+
+
+
+Clone the repo 
+========================================================
+- If you haven't already done so, clone the Assessment_template repo
+to you account.
+
+- In GitHub, you can rename the repo to reflect your assessment, ex. "CAscorp2017"
+
+- In your account, click "Clone or Download" to copy the repo location.
+
+- Now, open RStudio, *File -> New Project -> Version Control -> Git*
+
+- Copy the repo location in the *Repository URL* field.
+
+- Edit the "Project directory name" and "Create project as subdirectory of"
+as you wish
+
+- Click *Create Project*
+
+
+
+Suggesting changes to the template
+========================================================
+
+All master changes will be made to Assessment_template.  If there are
+update to Assessment_template, you should be able to pull those changes
+to your clone.
+
+If you'd like to suggest a change, you can fork the Assessment_template
+and submit a pull request.  HOWEVER, I'd like to hold off on this during 
+the assessment cycle.
+
+Feel free to submit an Issue on GitHub, and we'll likely get to them after
+the STAR panels.
+
+
+
+The YAML
+========================================================
+left: 60% 
+**Each line is described in the ReadMe PDF**
+
+<font size="6">
+title: 'Status of Blue Rockfish (*Sebastes mystinus*) Along the U.S. Pacific Coast in x2015x'   
+author: ''    
+date: ''   
+output:   
+&nbsp;&nbsp;  pdf_document:    
+&nbsp;&nbsp;&nbsp;    fig_caption: yes   
+&nbsp;&nbsp;&nbsp;    highlight: haddock   
+&nbsp;&nbsp;&nbsp;    includes:   
+&nbsp;&nbsp;&nbsp;&nbsp;      before_body: Titlepage.tex   
+&nbsp;&nbsp;&nbsp;&nbsp;     in_header: header.tex    
+&nbsp;&nbsp;&nbsp;    keep_tex: yes    
+&nbsp;&nbsp;&nbsp;    latex_engine: xelatex    
+&nbsp;&nbsp;&nbsp;    template: Default_template_modified.tex   
+&nbsp;&nbsp;&nbsp;    number_sections: yes   
+&nbsp;&nbsp;&nbsp;    toc: yes   
+&nbsp;&nbsp;&nbsp;    toc_depth: 4   
+
+***
 documentclass: article
-fontsize: 12pt
-geometry: margin=1in
-csl: CJFAS.csl
-bibliography: BibFile.bib
----
-```
+fontsize: 12pt   
+geometry: margin=1in   
+csl: CJFAS.csl   
+bibliography: BibFile.bib</font>
 
-Slide With Code
-========================================================
-
-
-```r
-summary(cars)
-```
-
-```
-     speed           dist       
- Min.   : 4.0   Min.   :  2.00  
- 1st Qu.:12.0   1st Qu.: 26.00  
- Median :15.0   Median : 36.00  
- Mean   :15.4   Mean   : 42.98  
- 3rd Qu.:19.0   3rd Qu.: 56.00  
- Max.   :25.0   Max.   :120.00  
-```
-
-Slide With Plot
-========================================================
-
-![plot of chunk unnamed-chunk-2](Assessment_template_demo-figure/unnamed-chunk-2-1.png)

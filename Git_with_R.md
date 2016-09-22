@@ -183,9 +183,9 @@ Basic idea:
 
 *Commit early and often.
 *Push to a remote, like GitHub, often.
-*The state of things on GitHub is your new ‚Äúworst case scenario‚Äù.
+*The state of things on GitHub is your new ìworst case scenarioî.
 *If you really screw things up locally, copy all the files (or the ones that have changed) to a safe place.
-*Usually your files are JUST FINE. But it is easy to goof up the Git infrastructure when you‚Äôre new at this. And it can be hard to get that straightened out on your own.
+*Usually your files are JUST FINE. But it is easy to goof up the Git infrastructure when youíre new at this. And it can be hard to get that straightened out on your own.
 *Rename the existing local repo as a temporary measure, i.e. before you do something radical, like delete it.
 *Clone the repo from GitHub to your local machine. You are back to a happy state.
 *Copy all relevant files back over from your safe space. The ones whose updated state you need to commit.
@@ -197,7 +197,7 @@ Practice this before you need it, so you see how it works.
 
 Cloning vs. Forking
 ========================================================
-Clone someone else‚Äôs repository on GitHub where you just want a copy. But you also want to track its evolution.  You can keep the clone up-to-date by pulling new commits into your local copy.
+Clone someone elseís repository on GitHub where you just want a copy. But you also want to track its evolution.  You can keep the clone up-to-date by pulling new commits into your local copy.
 
 
 What if you suspect you might want to propose a change to a repository? Then you should fork it, instead of clone it.

@@ -10,7 +10,7 @@ R Markdown
 In this section we're going to learn the R Markdown basics
 
 - R Markdown renders easiest to a HTML, but we're interested
-   in creating a PDF
+   in creating a PDF (unfortunately they're virtually mutually exclusive)
 - The assessment template is designed to only render to a PDF
 - Includes flavors of R, LaTeX, and HTML
 - It can be quirky at times

@@ -13,7 +13,7 @@ Slide content modified from Jenny Bryan's <i>Happy Git with R</i></div>
 Getting to know Git with R
 ========================================================
 author: Melissa Monk
-date: October 2016
+date: October 25-26, 2016
 autosize: true
 
 Workshop Goals
@@ -23,6 +23,25 @@ Become familiar with the Assessment Document Template and Git
 - Getting started with Git and examples
 - R markdown basics and examples
 - Assessment Document Template 
+
+
+Workshop Plan
+========================================================
+  
+    
+**Tuesday morning**: Basics of Git and GitHub and R markdown basics  
+
+**Tuesday lunch**: Fix remaining installation issues  
+
+**Tuesday afternoon**: Finish R markdown basics and start template  
+
+**Wednesday morning**: Continue working with the template  
+
+**Wednesday afternoon**: I'll be around   
+
+
+
+
 
 Why Git?
 ========================================================
@@ -197,7 +216,7 @@ Practice this before you need it, so you see how it works.
 
 Cloning vs. Forking
 ========================================================
-Clone someone else’s repository on GitHub where you just want a copy. But you also want to track its evolution.  You can keep the clone up-to-date by pulling new commits into your local copy.
+Clone someone else's repository on GitHub where you just want a copy. But you also want to track its evolution.  You can keep the clone up-to-date by pulling new commits into your local copy.
 
 
 What if you suspect you might want to propose a change to a repository? Then you should fork it, instead of clone it.

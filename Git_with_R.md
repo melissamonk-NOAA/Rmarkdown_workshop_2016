@@ -29,7 +29,7 @@ Workshop Plan
 ========================================================
   
     
-**Tuesday morning**: Basics of Git and GitHub and R markdown basics  
+**Tuesday morning**: Basics of Git and GitHub and R markdown   
 
 **Tuesday lunch**: Fix remaining installation issues  
 

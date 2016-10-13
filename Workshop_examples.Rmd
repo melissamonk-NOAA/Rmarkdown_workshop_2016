@@ -13,55 +13,39 @@ output:
     toc: yes
 ---
 
-Sebastes
-
-**Sebastes**  
-_Sebastes_  
-
-\emph{Sebastes}
-\textbf{Sebastes}
-\textbf{\emph{Sebastes}}
-
-This stock is at $Monkey_{40\%}$
-This stock is at $SPR^{40\%}$
-
-
-
-To get degrees and minutes type: $40^\circ 10^\prime$   
-
-
-
-
-
-
-HTML comment example
-<!-- HTML comment  -->
-
-
-
-
-
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-
-library(xtable)
-# Change options  
-options(xtable.comment = FALSE)  # turns off xtable comments
+```{r global_options, include=FALSE}
+    # set global options for R code chunks: echo=FALSE (don't include source code); 
+    # warning=FALSE (suppress R warnings); message=FALSE (suppress R messages)
+    # eval = TRUE is default
+    # knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 ```
-# Header
-## R Markdown
-### Subheading 2
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+```{r}
+library(xtable)
+```
+
+
+# Epmhasis (R markdown and LaTeX)
+
+
+# Headers
+
+
+# Commenting
+
+
+# Links
+
+# R code chunks
+
+You can embed an R code chunk like this:
 
 ```{r cars, echo=FALSE, include=F}
 summary(cars)
 ```
 
-## Figure from R code chunk
+# Figure from R code chunk
 
 You can also embed plots, for example:
 
@@ -69,19 +53,19 @@ You can also embed plots, for example:
 plot(pressure)
 ```
 
-\FloatBarrier
 
-We can now reference Figure \ref{fig:pressure}.
+We can now reference Figure \ref{fig:pressure}.  Note where this text ends up
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 
-## Figure from a file
+
+#Figure from a file
 
 ![Here's my caption \label{fig:fig_example}](RMarkdownFLow.png)
 
 
-##Table
+#Table
 
 ```{r, results='asis', echo=FALSE}
 #, results='asis', echo=FALSE, include=FALSE, message=FALSE, warning=FALSE
@@ -97,7 +81,7 @@ print(Tab_example, include.rownames = FALSE, caption.placement = 'top')
 
 We can now reference Table \ref{tab:Table_example}.
 
-##Math mode
+#Math mode
 
 You can use LaTeX math mode both inline and for inserting equations. It's handy for using inline math mode for management measure and lat/long.
 

@@ -85,7 +85,6 @@ A private repository is invisible to the world. The owner can grant read, write 
 There is also a formal notion of an organization, which can be useful for managing repository permissions for entire teams of people.
 
 
-
 Installation pain
 ========================================================
 Getting all the necessary software installed, configured, and playing nicely together is honestly half the battle here. Brace yourself for some pain. The upside is that you can give yourself a pat on the back once you get through this. And you WILL get through this.
@@ -129,21 +128,20 @@ Here we verify that RStudio can issue Git commands on your behalf. Assuming that
 
 If you succeed here, your set up is DONE.
 
-Make a new repo on GitHub
+
+
+Cloning vs. Forking
 ========================================================
-Go to <https://github.com> and make sure you are logged in.
+Clone someone else's repository on GitHub where you just want a copy. But you also want to track its evolution.  You can keep the clone up-to-date by pulling new commits into your local copy.
 
-Click green "New repository" button. Or, if you are on your own profile page, click on "Repositories", then click the green "New" button.
 
-Repository name: `myrepo` (or whatever you wish, we will delete this)  
-**Public  
-**YES Initialize this repository with a README
+What if you suspect you might want to propose a change to a repository? Then you should fork it, instead of clone it.
 
-Click big green button "Create repository."
+We're going to Fork the [Rmarkdown_workshop_2016 repository](https://github.com/melmonk/Rmarkdown_workshop_2016) and then clone it.
 
-Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" button. Or copy the SSH URL if you chose to set up SSH keys.
 
-Clone the new GitHub repository to your computer via RStudio
+
+Clone the forked GitHub repository to your computer via RStudio
 ========================================================
 In RStudio, start a new Project:
 
@@ -155,7 +153,6 @@ In RStudio, start a new Project:
 This should download the `README.md` file that we created on GitHub in the previous step. Look in RStudio's file browser pane for the `README.md` file.
 
 Make local changes, save, commit
-
 ========================================================
 From RStudio, modify the `README.md` file, e.g., by adding the line "This is a line from RStudio". Save your changes.
 
@@ -168,6 +165,8 @@ From RStudio:
   * If you're not already in the Git pop-up, click "Commit".
   * Type a message in "Commit message", such as "Commit from RStudio".
   * Click "Commit".
+  
+  
 
 Push your local changes online to GitHub
 ========================================================  
@@ -192,16 +191,6 @@ If you click on "commits," you should see one with the message "Commit from RStu
 
 If you have made it this far, you are DONE with set up. But first ...
 
-Were you challenged for GitHub username and password?
-========================================================
-If you somehow haven't done so yet, now is the perfect time to make sure you don't need to keep providing username and password on each push.
-
-Pick one:
-
-  * Credential caching for HTTPS access, chapter \@ref(credential-caching).
-  * Set up SSH keys, chapter \@ref(ssh-keys).
-
-__You can work on setting this up at break/lunch if anyone is interested.__
 
 Errors, errors and more errors
 ========================================================
@@ -223,12 +212,7 @@ Basic idea:
 
 Practice this before you need it, so you see how it works.
 
-Cloning vs. Forking
-========================================================
-Clone someone else's repository on GitHub where you just want a copy. But you also want to track its evolution.  You can keep the clone up-to-date by pulling new commits into your local copy.
 
-
-What if you suspect you might want to propose a change to a repository? Then you should fork it, instead of clone it.
 
 If you need a laugh
 ========================================================
@@ -236,3 +220,20 @@ Your commits will look more glorious scrolling by Star Wars style:
 
 - http://starlogs.net
 - http://starlogs.net/#melmonk/Rmarkdown_workshop_2016
+
+
+How to make a new repo on GitHub
+========================================================
+Go to <https://github.com> and make sure you are logged in.
+
+Click green "New repository" button. Or, if you are on your own profile page, click on "Repositories", then click the green "New" button.
+
+Repository name: `myrepo` (or whatever you wish, we will delete this)  
+**Public  
+**YES Initialize this repository with a README
+
+Click big green button "Create repository."
+
+Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" button. Or copy the SSH URL if you chose to set up SSH keys.
+
+

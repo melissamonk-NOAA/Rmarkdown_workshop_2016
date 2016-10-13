@@ -25,34 +25,21 @@ We'll walk through
 
 Create your assessment repository
 ========================================================
-From your GitHub account, click Repositories
+- On GitHub, navigate to the [StockAssessment_template repository](https://github.com/melmonk/StockAssessment_template)
 
-Click the green "New" button
+- In the top right, click `Fork`. The repository is now forked to your account
 
-![](Github_home.jpg)
+- This will take you to the repository on your account.  Click the green `Clone or download button`
+
+- You can rename the repository if you'd like.
+
+- Navigate toe Settings in the top right of the repository page.
+
+- Click the little clipboard to copy the link (choose HTTPS or SSH depending on your account setup)
 
 
-Create your assessment repository
+Repo to RStudio 
 ========================================================
-Name the new repository something intuitive such as CASCORP2017
-
-Leave the repo as public unless you plan to use a private repo
-
-Check the "Initialize this repository with a README"
-![](Github_new.jpg)
-
-
-
-
-Clone the repo 
-========================================================
-- If you haven't already done so, clone the Assessment_template repo
-to you account.
-
-- In GitHub, you can rename the repo to reflect your assessment, ex. "CAscorp2017"
-
-- In your account, click "Clone or Download" to copy the repo location.
-
 - Now, open RStudio, *File -> New Project -> Version Control -> Git*
 
 - Copy the repo location in the *Repository URL* field.
@@ -109,4 +96,9 @@ fontsize: 12pt
 geometry: margin=1in   
 csl: CJFAS.csl   
 bibliography: BibFile.bib</font>
+
+Remainder of the template demo
+========================================================
+We're going to work in the Assessment template repo and loosely follow
+the ReadMe.pdf
 

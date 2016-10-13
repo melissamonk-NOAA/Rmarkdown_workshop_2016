@@ -119,38 +119,71 @@ output:
 
 Document Sections
 ========================================================
+Document sections are created using # signs
 
+`#` is a top-level header   
+`##` Sub heading 1   
+`###` One additional level down   
 
-Lists
-========================================================
-
-
-Links
-========================================================
+And so forth
 
 
 Citations
 ========================================================
 
 
+
+
+
+
 R code chunks
 ========================================================
+R code chunks begin and end with three accent characters (next to the 1)
+
+R code chunk options in the repository are set global at the beginning
+of the Assessment_template.Rmd
+ 
+ {r global_options, include=FALSE} #sets global options       
+  knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)    
+  
+  
+**This is telling knitr:** 
+
+* echo=FALSE:    Don't print R code
+* warning=FALSE: Don't print warning messages
+* message=FALSE: don't print R messages
+
+
+
+R code chunks
+========================================================
+**Example Chunk:**
+
+      ```{r} 
+          1+1
+      ```
+If you don't set any R code chunk options, this is the default
+
+Now we'll go through some example R code chunks
 
 
 Figures
 ========================================================
+Figures are either embedded via R markdown syntax or via R code chunks.
 
+The assessment template contains both
 
 
 Tables
 ========================================================
 
+
+
 Referencing Tables and Figures
 ========================================================
 
 
-Italics and Bold
-========================================================
+
 
 
 

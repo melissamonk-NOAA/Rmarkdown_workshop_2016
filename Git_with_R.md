@@ -60,6 +60,11 @@ Why GitHub?
 - The remote host acts as a distribution channel or clearinghouse for your Git-managed project. 
 - It allows other people to see your stuff, sync up with you, and perhaps even make changes. 
 
+
+
+
+Why GitHub?
+========================================================
 - Even for private solo projects, it's a good idea to push your work to a remote location for peace of mind. Why? f you've recently pushed your work to GitHub, it's easy to grab a fresh copy, patch things up with the changes that only exist locally, and get on with your life.
 
 
@@ -85,6 +90,11 @@ Installation pain
 ========================================================
 Getting all the necessary software installed, configured, and playing nicely together is honestly half the battle here. Brace yourself for some pain. The upside is that you can give yourself a pat on the back once you get through this. And you WILL get through this.
 
+With Git.....when in doubt....just start over!
+
+
+Installation pain
+========================================================
 You will find far more resources for how to *use Git* than for installation and configuration. Why? The experts ...
 
   * Have been doing this for years. It's simply not hard for them anymore.
@@ -92,7 +102,6 @@ You will find far more resources for how to *use Git* than for installation and 
   * Get more satisfaction and reward for thinking and writing about Git concepts and workflows than Git installation.
 
 In their defense, it's hard to write installation instructions. Failures can be specific to an individual OS or even individual computer.
-
 
 Register a GitHub account
 ========================================================
@@ -200,16 +209,16 @@ This is a highly inelegant, but effective technique for disaster recovery.
 
 Basic idea:
 
-*Commit early and often.
-*Push to a remote, like GitHub, often.
-*The state of things on GitHub is your new “worst case scenario”.
-*If you really screw things up locally, copy all the files (or the ones that have changed) to a safe place.
-*Usually your files are JUST FINE. But it is easy to goof up the Git infrastructure when you’re new at this. And it can be hard to get that straightened out on your own.
+*Commit early and often.   
+*Push to a remote, like GitHub, often.   
+*The state of things on GitHub is your new "worst case scenario".   
+*If you really screw things up locally, copy all the files (or the ones that have changed) to a safe place.   
+*Usually your files are JUST FINE. But it is easy to goof up the Git infrastructure when you're new at this. And it can be hard to get that straightened out on your own.   
 *Rename the existing local repo as a temporary measure, i.e. before you do something radical, like delete it.
-*Clone the repo from GitHub to your local machine. You are back to a happy state.
+*Clone the repo from GitHub to your local machine. You are back to a happy state.   
 *Copy all relevant files back over from your safe space. The ones whose updated state you need to commit.
-*Stage and commit. Push.
-*Carry on with your life.
+*Stage and commit. Push.   
+*Carry on with your life.   
 
 
 Practice this before you need it, so you see how it works.
@@ -226,4 +235,4 @@ If you need a laugh
 Your commits will look more glorious scrolling by Star Wars style:
 
 - http://starlogs.net
-- http://starlogs.net/#melmonk/Assessment_template
+- http://starlogs.net/#melmonk/Rmarkdown_workshop_2016

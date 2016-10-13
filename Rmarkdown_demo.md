@@ -117,23 +117,10 @@ output:
 ---
 ```
 
-Document Sections
-========================================================
-Document sections are created using # signs
-
-`#` is a top-level header   
-`##` Sub heading 1   
-`###` One additional level down   
-
-And so forth
-
-
-Citations
+R markdown basics
 ========================================================
 
-
-
-
+Basics are laid out [here](http://rmarkdown.rstudio.com/authoring_basics.html)
 
 
 R code chunks
@@ -170,24 +157,6 @@ R code chunks
 If you don't set any R code chunk options, this is the default
 
 Now we'll go through some example R code chunks
-
-
-Figures
-========================================================
-Figures are either embedded via R markdown syntax or via R code chunks.
-
-The assessment template contains both
-
-
-Tables
-========================================================
-
-
-
-Referencing Tables and Figures
-========================================================
-
-
 
 
 

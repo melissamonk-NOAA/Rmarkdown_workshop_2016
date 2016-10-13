@@ -1,15 +1,46 @@
 ---
-title: "Workshop Examples"
+title: "Workshop Examples"  
 author: "Melissa Monk"
-date: "September 21, 2016"
-output: 
-  pdf_document: 
+date: ''
+output:
+  pdf_document:
+    fig_caption: yes    
     includes:
       in_header: header.tex
-    fig_caption: yes
     keep_tex: yes
     toc: yes
+  html_document:
+    toc: yes
 ---
+
+Sebastes
+
+**Sebastes**  
+_Sebastes_  
+
+\emph{Sebastes}
+\textbf{Sebastes}
+\textbf{\emph{Sebastes}}
+
+This stock is at $Monkey_{40\%}$
+This stock is at $SPR^{40\%}$
+
+
+
+To get degrees and minutes type: $40^\circ 10^\prime$   
+
+
+
+
+
+
+HTML comment example
+<!-- HTML comment  -->
+
+
+
+
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -18,13 +49,15 @@ library(xtable)
 # Change options  
 options(xtable.comment = FALSE)  # turns off xtable comments
 ```
+# Header
 ## R Markdown
+### Subheading 2
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
+```{r cars, echo=FALSE, include=F}
 summary(cars)
 ```
 
@@ -32,9 +65,13 @@ summary(cars)
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
+```{r pressure, echo=FALSE, fig.cap="Figure of something  at $40^\\circ 10^\\prime$. \\label{fig:pressure}"}
 plot(pressure)
 ```
+
+\FloatBarrier
+
+We can now reference Figure \ref{fig:pressure}.
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
@@ -46,7 +83,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 ##Table
 
-```{r,}
+```{r, results='asis', echo=FALSE}
 #, results='asis', echo=FALSE, include=FALSE, message=FALSE, warning=FALSE
 Tab = read.csv('Table_example.csv')
 

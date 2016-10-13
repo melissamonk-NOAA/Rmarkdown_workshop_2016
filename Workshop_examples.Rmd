@@ -4,14 +4,19 @@ author: "Melissa Monk"
 date: "September 21, 2016"
 output: 
   pdf_document: 
+    includes:
+      in_header: header.tex
     fig_caption: yes
     keep_tex: yes
-    latex_engine: xelatex
     toc: yes
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+library(xtable)
+# Change options  
+options(xtable.comment = FALSE)  # turns off xtable comments
 ```
 ## R Markdown
 
@@ -23,7 +28,7 @@ When you click the **Knit** button a document will be generated that includes bo
 summary(cars)
 ```
 
-## Including Plots
+## Figure from R code chunk
 
 You can also embed plots, for example:
 
@@ -33,4 +38,36 @@ plot(pressure)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
-##
+
+## Figure from a file
+
+![Here's my caption \label{fig:fig_example}](RMarkdownFLow.png)
+
+
+##Table
+
+```{r,}
+#, results='asis', echo=FALSE, include=FALSE, message=FALSE, warning=FALSE
+Tab = read.csv('Table_example.csv')
+
+Tab_example = xtable(Tab, 
+                   caption=c('This is where you write your caption'),
+                   label = 'tab:Table_example')
+
+print(Tab_example, include.rownames = FALSE, caption.placement = 'top')
+
+```
+
+We can now reference Table \ref{tab:Table_example}.
+
+##Math mode
+
+You can use LaTeX math mode both inline and for inserting equations. It's handy for using inline math mode for management measure and lat/long.
+
+Inline looks like this:  $SPR_{40\%}$  
+*Note the % sign has a \ when used in math mode, but not in R markdown text.
+
+To get degrees and minutes type: $40^\circ 10^\prime$   
+
+
+

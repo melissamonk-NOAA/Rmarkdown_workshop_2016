@@ -9,8 +9,7 @@ output:
       in_header: header.tex
     keep_tex: yes
     toc: yes
-  html_document:
-    toc: yes
+
 ---
 
 ```{r global_options, include=FALSE}
@@ -37,6 +36,8 @@ library(xtable)
 
 # Links
 
+
+
 # R code chunks
 
 You can embed an R code chunk like this:
@@ -53,11 +54,12 @@ You can also embed plots, for example:
 plot(pressure)
 ```
 
-
-We can now reference Figure \ref{fig:pressure}.  Note where this text ends up
+<!--
+We can now reference Figure \ref{fig:pressure}.  Note where this text ends up.
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
+-->
 
 
 #Figure from a file
@@ -65,7 +67,9 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 ![Here's my caption \label{fig:fig_example}](RMarkdownFLow.png)
 
 
-#Table
+
+
+#Tables
 
 ```{r, results='asis', echo=FALSE}
 #, results='asis', echo=FALSE, include=FALSE, message=FALSE, warning=FALSE
@@ -77,18 +81,28 @@ Tab_example = xtable(Tab,
 
 print(Tab_example, include.rownames = FALSE, caption.placement = 'top')
 
+# print option to try, scalebox = 0.7
+# add alignment
+
+
 ```
 
 We can now reference Table \ref{tab:Table_example}.
 
-#Math mode
+Now, try putting the R code chunk within and HTML comment.
 
+
+
+#Math mode
+ <!--
 You can use LaTeX math mode both inline and for inserting equations. It's handy for using inline math mode for management measure and lat/long.
 
 Inline looks like this:  $SPR_{40\%}$  
 *Note the % sign has a \ when used in math mode, but not in R markdown text.
 
 To get degrees and minutes type: $40^\circ 10^\prime$   
+
+-->
 
 
 

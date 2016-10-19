@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Getting to know Git with R</title>
+  <title>How to Use the Assessment Template </title>
     
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -773,7 +773,7 @@ hljs.initHighlightingOnLoad();
    
   
 
-<style>.footer {    color: black; background: #E8E8E8;    position: fixed; top: 90%;    text-align:center; width:100%;}</style><div class="footer" style="margin-top;font-size:80%;">Slide content modified from Jenny Bryan's <i>Happy Git with R</i></div>
+
 
 
 
@@ -784,7 +784,7 @@ hljs.initHighlightingOnLoad();
   <div class="slides">
 
 <section data-state="section" data-transition="linear" data-transition-speed="default">
-<h1>Getting to know Git with R</h1><p>Melissa Monk<br/>October 25-26, 2016</p>
+<h1>How to Use the Assessment Template </h1><p>Melissa Monk<br/>October 2016</p>
 
 <div class="slideContent" >
 
@@ -792,303 +792,119 @@ hljs.initHighlightingOnLoad();
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
-<h3>Workshop Goals</h3>
+<h3>Assessment Template: The Details</h3>
 <div class="slideContent" >
-<p>Become familiar with the Assessment Document Template and Git</p>
+<p>We&#39;ll walk through </p>
 
 <ul>
-<li>Getting started with Git and examples</li>
-<li>R markdown basics and examples</li>
-<li>Assessment Document Template </li>
+<li><p>How to get a copy of the repo</p></li>
+<li><p>How to incorporate your assessment</p></li>
+<li><p>Major sections of the document</p></li>
+<li><p>Iserting tables</p>
+
+<ul>
+<li>via R code chunks and txt files</li>
+</ul></li>
+<li><p>Inserting figures</p>
+
+<ul>
+<li>via r4SS output and image files</li>
+</ul></li>
+<li><p>Literature cited</p></li>
 </ul>
 
 </div>
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
-<h3>Workshop Plan</h3>
-<div class="slideContent" >
-<p><strong>Tuesday morning</strong>: Basics of Git and GitHub and R markdown   </p>
-
-<p><strong>Tuesday lunch</strong>: Fix remaining installation issues  </p>
-
-<p><strong>Tuesday afternoon</strong>: Finish R markdown basics and start template  </p>
-
-<p><strong>Wednesday morning</strong>: Continue working with the template  </p>
-
-<p><strong>Wednesday afternoon</strong>: I&#39;ll be around   </p>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>Why Git?</h3>
+<h3>Create your assessment repository</h3>
 <div class="slideContent" >
 <ul>
-<li><p><a href="http://git-scm.com">Git</a> is a <strong>version control system</strong>. Its original purpose was to help groups of developers work collaboratively on big software projects. Git manages the evolution of a set of files &ndash; called a <strong>repository</strong> &ndash; in a sane, highly structured way. If you have no idea what I&#39;m talking about, think of it as the &ldquo;Track Changes&rdquo; features from Microsoft Word on steroids.</p></li>
-<li><p>Git has been re-purposed by the data science community. In addition to using it for source code, we use it to manage the motley collection of files that make up typical data analytical projects, which often consist of data, figures, reports, and, yes, source code.</p></li>
+<li><p>On GitHub, navigate to the <a href="https://github.com/melmonk/StockAssessment_template">StockAssessment_template repository</a></p></li>
+<li><p>In the top right, click <code>Fork</code>. The repository is now forked to your account</p></li>
+<li><p>This will take you to the repository on your account.  Click the green <code>Clone or download button</code></p></li>
+<li><p>You can rename the repository if you&#39;d like.</p></li>
+<li><p>Navigate toe Settings in the top right of the repository page.</p></li>
+<li><p>Click the little clipboard to copy the link (choose HTTPS or SSH depending on your account setup)</p></li>
 </ul>
 
 </div>
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
-<h3>Why GitHub?</h3>
+<h3>Repo to RStudio </h3>
 <div class="slideContent" >
 <ul>
-<li><p>This is where hosting services like <a href="https://github.com">GitHub</a>, <a href="https://bitbucket.org">Bitbucket</a>, and <a href="https://about.gitlab.com">GitLab</a> come in. </p></li>
-<li><p>They provide a home for your Git-based projects on the internet. </p></li>
-<li><p>The remote host acts as a distribution channel or clearinghouse for your Git-managed project. </p></li>
-<li><p>It allows other people to see your stuff, sync up with you, and perhaps even make changes. </p></li>
+<li><p>Now, open RStudio, <em>File -&gt; New Project -&gt; Version Control -&gt; Git</em></p></li>
+<li><p>Copy the repo location in the <em>Repository URL</em> field.</p></li>
+<li><p>Edit the &ldquo;Project directory name&rdquo; and &ldquo;Create project as subdirectory of&rdquo;
+as you wish</p></li>
+<li><p>Click <em>Create Project</em></p></li>
 </ul>
 
 </div>
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
-<h3>Why GitHub?</h3>
+<h3>Suggesting changes to the template</h3>
 <div class="slideContent" >
-<ul>
-<li>Even for private solo projects, it&#39;s a good idea to push your work to a remote location for peace of mind. Why? f you&#39;ve recently pushed your work to GitHub, it&#39;s easy to grab a fresh copy, patch things up with the changes that only exist locally, and get on with your life.</li>
-</ul>
+<p>All master changes will be made to Assessment_template.  If there are
+update to Assessment_template, you should be able to pull those changes
+to your clone.</p>
+
+<p>If you&#39;d like to suggest a change, you can fork the Assessment_template
+and submit a pull request.  HOWEVER, I&#39;d like to hold off on this during 
+the assessment cycle.</p>
+
+<p>Feel free to submit an Issue on GitHub, and we&#39;ll likely get to them after
+the STAR panels.</p>
 
 </div>
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
-<h3>Is it going to hurt?</h3>
-<div class="slideContent" >
-<p>You have to install Git, get local Git talking to GitHub, and make sure RStudio can talk to local Git (and, therefore, GitHub). This is one-time or once-per-computer pain.</p>
+<h3>The YAML</h3>
+<div class="column column1 slideContent" style="width: 58%;" >
+<p><strong>Each line is described in the ReadMe PDF</strong></p>
 
-<p><strong>More bad news.</strong><br/>
-Do you use GitHub to work with other people or to coordinate your own work from multiple computers? If so, after you recover from the initial setup, Git will crush you again with <strong>merge conflicts</strong>. And this is not one-time pain, this could be a dull ache for a long time. The best remedy is prevention, but also understanding how to back out of tricky situations and tackle them on your own terms.</p>
+<p><font size="6">
+title: &#39;Status of Blue Rockfish (<em>Sebastes mystinus</em>) Along the U.S. Pacific Coast in x2015x&#39;<br/>
+author: &#39;&#39;<br/>
+date: &#39;&#39;<br/>
+output:<br/>
+&nbsp;&nbsp;  pdf_document:<br/>
+&nbsp;&nbsp;&nbsp;    fig_caption: yes<br/>
+&nbsp;&nbsp;&nbsp;    highlight: haddock<br/>
+&nbsp;&nbsp;&nbsp;    includes:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;      before_body: Titlepage.tex<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;     in_header: header.tex<br/>
+&nbsp;&nbsp;&nbsp;    keep_tex: yes<br/>
+&nbsp;&nbsp;&nbsp;    latex_engine: xelatex<br/>
+&nbsp;&nbsp;&nbsp;    template: Default_template_modified.tex<br/>
+&nbsp;&nbsp;&nbsp;    number_sections: yes<br/>
+&nbsp;&nbsp;&nbsp;    toc: yes<br/>
+&nbsp;&nbsp;&nbsp;    toc_depth: 4   </p>
+
+
+</div>
+
+<div class="column column2 slideContent" style="width: 38%;" >
+
+
+<p>documentclass: article
+fontsize: 12pt<br/>
+geometry: margin=1in<br/>
+csl: CJFAS.csl<br/>
+bibliography: BibFile.bib</font></p>
 
 </div>
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
-<h3>Who can do what?</h3>
+<h3>Remainder of the template demo</h3>
 <div class="slideContent" >
-<p>A public repository is readable by the world. The owner can grant higher levels of permission to others, such as the ability to push commits.</p>
-
-<p>A private repository is invisible to the world. The owner can grant read, write (push), or admin access to others.</p>
-
-<p>There is also a formal notion of an organization, which can be useful for managing repository permissions for entire teams of people.</p>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>Installation pain</h3>
-<div class="slideContent" >
-<p>Getting all the necessary software installed, configured, and playing nicely together is honestly half the battle here. Brace yourself for some pain. The upside is that you can give yourself a pat on the back once you get through this. And you WILL get through this.</p>
-
-<p>With Git&hellip;..when in doubt&hellip;.just start over!</p>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>Installation pain</h3>
-<div class="slideContent" >
-<p>You will find far more resources for how to <em>use Git</em> than for installation and configuration. Why? The experts &hellip;</p>
-
-<ul>
-<li>Have been doing this for years. It&#39;s simply not hard for them anymore.</li>
-<li>Probably use some flavor of Unix. They may secretly (or not so secretly) take pride in neither using nor knowing Windows.</li>
-<li>Get more satisfaction and reward for thinking and writing about Git concepts and workflows than Git installation.</li>
-</ul>
-
-<p>In their defense, it&#39;s hard to write installation instructions. Failures can be specific to an individual OS or even individual computer.</p>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>Register a GitHub account</h3>
-<div class="slideContent" >
-<p>Register an account with GitHub. It&#39;s free!</p>
-
-<ul>
-<li><a href="https://github.com">https://github.com</a></li>
-</ul>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>Install software if needed</h3>
-<div class="slideContent" >
-<ul>
-<li>RStudio</li>
-<li>Update R packages</li>
-<li>Git (see Section 7 <a href="http://happygitwithr.com/install-git.html">http://happygitwithr.com/install-git.html</a>)</li>
-<li>MikTek (needed to compile to PDF)</li>
-<li>Jenny Bryan reccommends installing a Git client (we aren&#39;t going to today, but the instructions are available)</li>
-<li>We also aren&#39;t going to set up keys for SSH, but directions are available</li>
-</ul>
-
-<p><strong>Get current, people.</strong> You don&#39;t want to adopt new things on day one. But at some point, running old versions of software adds unnecessary difficulty.</p>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>Connect RStudio to Git and GitHub</h3>
-<div class="slideContent" >
-<p>Here we verify that RStudio can issue Git commands on your behalf. Assuming that you&#39;ve gotten local Git to talk to GitHub, this means you&#39;ll also be able to pull from and push to GitHub from RStudio.</p>
-
-<p>If you succeed here, your set up is DONE.</p>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>Make a new repo on GitHub</h3>
-<div class="slideContent" >
-<p>Go to <a href="https://github.com">https://github.com</a> and make sure you are logged in.</p>
-
-<p>Click green &ldquo;New repository&rdquo; button. Or, if you are on your own profile page, click on &ldquo;Repositories&rdquo;, then click the green &ldquo;New&rdquo; button.</p>
-
-<p>Repository name: <code>myrepo</code> (or whatever you wish, we will delete this)<br/>
-**Public<br/>
-**YES Initialize this repository with a README</p>
-
-<p>Click big green button &ldquo;Create repository.&rdquo;</p>
-
-<p>Copy the HTTPS clone URL to your clipboard via the green &ldquo;Clone or Download&rdquo; button. Or copy the SSH URL if you chose to set up SSH keys.</p>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>Clone the new GitHub repository to your computer via RStudio</h3>
-<div class="slideContent" >
-<p>In RStudio, start a new Project:</p>
-
-<ul>
-<li><em>File &gt; New Project &gt; Version Control &gt; Git</em>. In the &ldquo;repository URL&rdquo; paste the URL of your new GitHub repository. It will be something like this <code>https://github.com/melmonk/myrepo.git</code>.</li>
-<li>Take charge of &ndash; or at least notice! &ndash; the local directory for the Project. A common rookie mistake is to have no idea where you are saving files or what your working directory is. Pay attention. Be intentional. Personally, I would do this in <code>~/tmp</code>.</li>
-<li>I suggest you check &ldquo;Open in new session&rdquo;, as that&#39;s what you&#39;ll usually do in real life.</li>
-<li>Click &ldquo;Create Project&rdquo;.</li>
-</ul>
-
-<p>This should download the <code>README.md</code> file that we created on GitHub in the previous step. Look in RStudio&#39;s file browser pane for the <code>README.md</code> file.</p>
-
-<p>Make local changes, save, commit</p>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-
-<div class="slideContent noTitle" >
-<p>From RStudio, modify the <code>README.md</code> file, e.g., by adding the line &ldquo;This is a line from RStudio&rdquo;. Save your changes.</p>
-
-<p>Commit these changes to your local repo. How?</p>
-
-<p>From RStudio:</p>
-
-<ul>
-<li>Click the &ldquo;Git&rdquo; tab in upper right pane.</li>
-<li>Check &ldquo;Staged&rdquo; box for <code>README.md</code>.</li>
-<li>If you&#39;re not already in the Git pop-up, click &ldquo;Commit&rdquo;.</li>
-<li>Type a message in &ldquo;Commit message&rdquo;, such as &ldquo;Commit from RStudio&rdquo;.</li>
-<li>Click &ldquo;Commit&rdquo;.</li>
-</ul>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>Push your local changes online to GitHub</h3>
-<div class="slideContent" >
-<p>Click the green &ldquo;Push&rdquo; button to send your local changes to GitHub. If you are challenged for username and password, provide them (but see below). You should see some message along these lines.</p>
-
-<pre><code class="sh">[master dc671f0] blah
- 3 files changed, 22 insertions(+)
- create mode 100644 .gitignore
- create mode 100644 myrepo.Rproj
-</code></pre>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>Confirm the local change propagated to the GitHub remote</h3>
-<div class="slideContent" >
-<p>Go back to the browser. I assume we&#39;re still viewing your new GitHub repo.</p>
-
-<p>Refresh.</p>
-
-<p>You should see the new &ldquo;This is a line from RStudio&rdquo; in the README.</p>
-
-<p>If you click on &ldquo;commits,&rdquo; you should see one with the message &ldquo;Commit from RStudio&rdquo;.</p>
-
-<p>If you have made it this far, you are DONE with set up. But first &hellip;</p>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>Were you challenged for GitHub username and password?</h3>
-<div class="slideContent" >
-<p>If you somehow haven&#39;t done so yet, now is the perfect time to make sure you don&#39;t need to keep providing username and password on each push.</p>
-
-<p>Pick one:</p>
-
-<ul>
-<li>Credential caching for HTTPS access, chapter \@ref(credential-caching).</li>
-<li>Set up SSH keys, chapter \@ref(ssh-keys).</li>
-</ul>
-
-<p><strong>You can work on setting this up at break/lunch if anyone is interested.</strong></p>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>Errors, errors and more errors</h3>
-<div class="slideContent" >
-<p>This is a highly inelegant, but effective technique for disaster recovery.</p>
-
-<p>Basic idea:</p>
-
-<p>*Commit early and often.<br/>
-*Push to a remote, like GitHub, often.<br/>
-*The state of things on GitHub is your new &ldquo;worst case scenario&rdquo;.<br/>
-*If you really screw things up locally, copy all the files (or the ones that have changed) to a safe place.<br/>
-*Usually your files are JUST FINE. But it is easy to goof up the Git infrastructure when you&#39;re new at this. And it can be hard to get that straightened out on your own.<br/>
-*Rename the existing local repo as a temporary measure, i.e. before you do something radical, like delete it.
-*Clone the repo from GitHub to your local machine. You are back to a happy state.<br/>
-*Copy all relevant files back over from your safe space. The ones whose updated state you need to commit.
-*Stage and commit. Push.<br/>
-*Carry on with your life.   </p>
-
-<p>Practice this before you need it, so you see how it works.</p>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>Cloning vs. Forking</h3>
-<div class="slideContent" >
-<p>Clone someone else&#39;s repository on GitHub where you just want a copy. But you also want to track its evolution.  You can keep the clone up-to-date by pulling new commits into your local copy.</p>
-
-<p>What if you suspect you might want to propose a change to a repository? Then you should fork it, instead of clone it.</p>
-
-</div>
-
-</section>
-<section data-transition="linear" data-transition-speed="default">
-<h3>If you need a laugh</h3>
-<div class="slideContent" >
-<p>Your commits will look more glorious scrolling by Star Wars style:</p>
-
-<ul>
-<li><a href="http://starlogs.net">http://starlogs.net</a></li>
-<li><a href="http://starlogs.net/#melmonk/Rmarkdown_workshop_2016">http://starlogs.net/#melmonk/Rmarkdown_workshop_2016</a></li>
-</ul>
+<p>We&#39;re going to work in the Assessment template repo and loosely follow
+the ReadMe.pdf</p>
 
 </div>
 

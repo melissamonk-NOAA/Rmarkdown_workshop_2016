@@ -97,6 +97,7 @@ geometry: margin=1in
 csl: CJFAS.csl   
 bibliography: BibFile.bib</font>
 
+
 Remainder of the template demo
 ========================================================
 We're going to work in the Assessment template repo and loosely follow

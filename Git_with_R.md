@@ -41,6 +41,12 @@ Workshop Plan
 
 
 
+Download a copy of the slides (if you haven't already)
+========================================================
+We're going to Fork the [Rmarkdown_workshop_2016 repository](https://github.com/melmonk/Rmarkdown_workshop_2016) from my repository and then clone it.
+
+See the Agenda for detailed instructions.
+
 
 
 Why Git?
@@ -59,13 +65,9 @@ Why GitHub?
 - They provide a home for your Git-based projects on the internet. 
 - The remote host acts as a distribution channel or clearinghouse for your Git-managed project. 
 - It allows other people to see your stuff, sync up with you, and perhaps even make changes. 
+- Even for private solo projects, it's a good idea to push your work to a remote location for peace of mind. 
 
-
-
-
-Why GitHub?
-========================================================
-- Even for private solo projects, it's a good idea to push your work to a remote location for peace of mind. Why? f you've recently pushed your work to GitHub, it's easy to grab a fresh copy, patch things up with the changes that only exist locally, and get on with your life.
+IF you haven't done so, register an account with [GitHub](www.github.com) now.
 
 
 Is it going to hurt?
@@ -74,61 +76,30 @@ You have to install Git, get local Git talking to GitHub, and make sure RStudio 
 
 
 **More bad news.**      
-Do you use GitHub to work with other people or to coordinate your own work from multiple computers? If so, after you recover from the initial setup, Git will crush you again with **merge conflicts**. And this is not one-time pain, this could be a dull ache for a long time. The best remedy is prevention, but also understanding how to back out of tricky situations and tackle them on your own terms.
+Do you use GitHub to work with other people or to coordinate your own work from multiple computers? 
+
+If so, after you recover from the initial setup, Git will crush you again with **merge conflicts**. And this is not one-time pain, this could be a dull ache for a long time. The best remedy is prevention, but also understanding how to back out of tricky situations and tackle them on your own terms.
 
 Who can do what?
 ========================================================
-A public repository is readable by the world. The owner can grant higher levels of permission to others, such as the ability to push commits.
+A **public repository** is readable by the world. The owner can grant higher levels of permission to others, such as the ability to push commits.
 
-A private repository is invisible to the world. The owner can grant read, write (push), or admin access to others.
+A **private repository** is invisible to the world. The owner can grant read, write (push), or admin access to others.
 
-There is also a formal notion of an organization, which can be useful for managing repository permissions for entire teams of people.
-
-
-Installation pain
-========================================================
-Getting all the necessary software installed, configured, and playing nicely together is honestly half the battle here. Brace yourself for some pain. The upside is that you can give yourself a pat on the back once you get through this. And you WILL get through this.
-
-With Git.....when in doubt....just start over!
+There is also a formal notion of an **organization**, which can be useful for managing repository permissions for entire teams of people.
 
 
-Installation pain
-========================================================
-You will find far more resources for how to *use Git* than for installation and configuration. Why? The experts ...
-
-  * Have been doing this for years. It's simply not hard for them anymore.
-  * Probably use some flavor of Unix. They may secretly (or not so secretly) take pride in neither using nor knowing Windows.
-  * Get more satisfaction and reward for thinking and writing about Git concepts and workflows than Git installation.
-
-In their defense, it's hard to write installation instructions. Failures can be specific to an individual OS or even individual computer.
-
-Register a GitHub account
-========================================================
-Register an account with GitHub. It's free!
-
-  * <https://github.com>
-  
   
 Install software if needed
 ========================================================
    * RStudio
    * Update R packages
    * Git (see Section 7 http://happygitwithr.com/install-git.html)
-   * MikTek (needed to compile to PDF)
+   * PC: MikTek or TeX Live(needed to compile to PDF) 
+   * Mac: MacTeX
    * Jenny Bryan reccommends installing a Git client (we aren't going to today, but the instructions are available)
-   * We also aren't going to set up keys for SSH, but directions are available
+   * Directions for setting up keys for SSH are available in the template ReadMe
    
-**Get current, people.** You don't want to adopt new things on day one. But at some point, running old versions of software adds unnecessary difficulty.
-
-
-
-Connect RStudio to Git and GitHub
-========================================================
-Here we verify that RStudio can issue Git commands on your behalf. Assuming that you've gotten local Git to talk to GitHub, this means you'll also be able to pull from and push to GitHub from RStudio.
-
-If you succeed here, your set up is DONE.
-
-
 
 Cloning vs. Forking
 ========================================================
@@ -138,19 +109,6 @@ Clone someone else's repository on GitHub where you just want a copy. But you al
 What if you suspect you might want to propose a change to a repository? Then you should fork it, instead of clone it.
 
 We're going to Fork the [Rmarkdown_workshop_2016 repository](https://github.com/melmonk/Rmarkdown_workshop_2016) and then clone it.
-
-
-
-Clone the forked GitHub repository to your computer via RStudio
-========================================================
-In RStudio, start a new Project:
-
-  * *File > New Project > Version Control > Git*. In the "repository URL" paste the URL of your new GitHub repository. It will be something like this `https://github.com/melmonk/myrepo.git`.
-  * Take charge of -- or at least notice! -- the local directory for the Project. A common rookie mistake is to have no idea where you are saving files or what your working directory is. Pay attention. Be intentional. Personally, I would do this in `~/tmp`.
-  * I suggest you check "Open in new session", as that's what you'll usually do in real life.
-  * Click "Create Project".
-
-This should download the `README.md` file that we created on GitHub in the previous step. Look in RStudio's file browser pane for the `README.md` file.
 
 Make local changes, save, commit
 ========================================================

@@ -1,0 +1,233 @@
+\documentclass[12pt,]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+\hypersetup{unicode=true,
+            pdftitle={black\_rockfish\_sensitivity\_table},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+  \title{black\_rockfish\_sensitivity\_table}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{}
+  \preauthor{}\postauthor{}
+  \date{}
+  \predate{}\postdate{}
+
+
+% This file contains all of the LaTeX packages you may need to compile the document
+% Documentation for each package can be found onlines
+\usepackage{tabularx}                                             % table environment providing flexibility
+\usepackage{caption}                                              % for creating captions  
+\usepackage{longtable}                                            % allows tables to span multiple pages
+\usepackage{rotating}                                             % allows for sideways tables
+\usepackage{float}                                                % floating environments; may not need in rmarkdown
+\usepackage{placeins}                                             % keeps floats from moving
+\usepackage{indentfirst}                                          % indents first paragraph of a section
+\usepackage{mdwtab}                                               % continued float multi-page figure
+\usepackage{enumerate}                                            % create lists
+\usepackage{hyperref}                                             % highlight cross references
+\hypersetup{colorlinks=true, urlcolor=blue, linktoc=page, linkcolor=blue, citecolor=blue} %define referencing colors
+%\usepackage{makebox}                                             % make boxes around text
+\usepackage[usenames,dvipsnames]{xcolor}                          % color name options
+%\usepackage[space]{grffile}                                      % spaces in file name path
+\usepackage{soul}                                                 % highlight text
+\usepackage{enumitem}                                             % numbered lists
+\usepackage{lineno}                                               % Line numbers; comment out for final
+\usepackage{upquote}                                              % produce grave accent in latex
+\usepackage{verbatim}                                             % produces verbatim results
+\usepackage{fancyvrb}                                             % verbatim in a box
+\usepackage[inline]{showlabels}                                   % show table and figure labels; comment out for final
+%\usepackage{draftwatermark}                                      % places Draft watermark in background; comment out for final
+\usepackage{textcomp}                                             % fixes error with packages interfering
+\usepackage{lscape}                                               % rotate pages - to allow for landscape longtables
+%\pdfinterwordspaceon                                              % fix loss of inter word spacing
+\usepackage{cmap}                                                 % fix mapping characters to unicode
+\RequirePackage[linewidth = 1]{pdfcomment}                        %pdf comments
+\RequirePackage[l2tabu, orthodox]{nag}                            %checks packages related to the accessibility?
+%\RequirePackage[tagged]{accessibilityMeta}
+
+\linenumbers                                                      % specify use of line numbers
+
+\definecolor{light-gray}{gray}{.85}
+%\usepackage[tagged]{accessibility-meta}
+
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{4}
+\tableofcontents
+}
+\begin{landscape}
+\tiny
+\begin{longtable}{l|l|llllll|llllll|llllll}
+\caption{One of the black rockfish sensitivity
+                                    tables.} \\ 
+  &  \multicolumn{1}{c}{Base case} 
+                          &  \multicolumn{6}{c}{Index removal} 
+                          &  \multicolumn{6}{c}{Length comp removal}
+                          &  \multicolumn{6}{c}{Age comp removal} \\
+ \hline
+ &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 \\ 
+  \hline
+Total likelihood & 1618 & 1628 & 1502 & 1629 & 1629 & 1633 & 1546 & 1593 & 1532 & 1482 & 1486 & 1571 & 1618 & 1576 & 1599 & 1110 & 1165 & 1581 & 638 \\ 
+  Survey likelihood components &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\ 
+  Onboard & -9 & 3 & -10 & -9 & -9 & -9 & -6 & -9 & -9 & -9 & -9 & -9 & -11 & -9 & -9 & -9 & -9 & -9 & -9 \\ 
+  Tag & 66 & 66 & 3232 & 66 & 66 & 66 & 3143 & 66 & 67 & 66 & 64 & 66 & 44 & 66 & 66 & 65 & 66 & 66 & 65 \\ 
+  MRFSS & -11 & -11 & -7 & 3 & -11 & -11 & -5 & -11 & -11 & -11 & -10 & -11 & -10 & -11 & -11 & -11 & -11 & -11 & -11 \\ 
+  ORBS & -11 & -11 & -12 & -11 & -8 & -11 & -5 & -11 & -11 & -11 & -11 & -11 & -13 & -11 & -11 & -11 & -11 & -11 & -11 \\ 
+  CommLog & -15 & -15 & -15 & -15 & -15 & 15 & -4 & -15 & -15 & -15 & -15 & -15 & -15 & -15 & -15 & -15 & -15 & -15 & -15 \\ 
+  Length likelihood components &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\ 
+  Trawl & 24 & 24 & 26 & 25 & 25 & 25 & 27 & 32 & 24 & 25 & 23 & 25 & 32 & 24 & 24 & 24 & 25 & 24 & 25 \\ 
+  Live & 79 & 79 & 82 & 79 & 79 & 79 & 82 & 79 & 5954 & 78 & 85 & 79 & 8282 & 79 & 79 & 75 & 86 & 76 & 68 \\ 
+  Dead & 118 & 118 & 125 & 118 & 118 & 118 & 124 & 118 & 117 & 249 & 117 & 118 & 1033 & 118 & 118 & 114 & 117 & 118 & 114 \\ 
+  RecO & 94 & 94 & 94 & 95 & 95 & 95 & 94 & 94 & 94 & 98 & 5580 & 94 & 1301 & 94 & 94 & 89 & 92 & 94 & 85 \\ 
+  RecS & 46 & 46 & 47 & 46 & 46 & 46 & 47 & 46 & 46 & 46 & 46 & 964 & 774 & 46 & 46 & 47 & 47 & 46 & 47 \\ 
+  Age likeklihood components &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\ 
+  Trawl & 42 & 42 & 40 & 42 & 42 & 42 & 40 & 42 & 41 & 42 & 39 & 41 & 37 & 43 & 42 & 44 & 39 & 43 & 32 \\ 
+  Live & 19 & 19 & 19 & 19 & 19 & 19 & 19 & 19 & 19 & 19 & 19 & 19 & 19 & 19 & 19 & 20 & 19 & 19 & 23 \\ 
+  Dead & 485 & 489 & 459 & 485 & 485 & 486 & 460 & 486 & 479 & 479 & 459 & 484 & 452 & 490 & 489 & 528 & 455 & 488 & 698 \\ 
+  RecO & 427 & 425 & 414 & 427 & 427 & 426 & 414 & 427 & 431 & 427 & 415 & 428 & 432 & 425 & 425 & 420 & 550 & 427 & 729 \\ 
+  Small & 37 & 37 & 38 & 37 & 37 & 37 & 37 & 37 & 35 & 37 & 39 & 37 & 36 & 37 & 37 & 35 & 38 & 39 & 62 \\ 
+  MnWt likelihood components &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\ 
+  Trawl & 72 & 73 & 73 & 73 & 73 & 73 & 73 & 72 & 73 & 73 & 72 & 72 & 72 & 73 & 73 & 72 & 73 & 73 & 72 \\ 
+  Dead & 152 & 152 & 128 & 152 & 152 & 152 & 129 & 152 & 152 & 137 & 152 & 154 & 115 & 152 & 152 & 151 & 153 & 152 & 152 \\ 
+  Parameters &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\ 
+  NatM$\backslash$\_p$\backslash$\_1$\backslash$\_Fem$\backslash$\_GP$\backslash$\_1 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 \\ 
+  NatM$\backslash$\_p$\backslash$\_2$\backslash$\_Fem$\backslash$\_GP$\backslash$\_1 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 \\ 
+  L$\backslash$\_at$\backslash$\_Amin$\backslash$\_Fem$\backslash$\_GP$\backslash$\_1 & 20.32 & 19.92 & 19.70 & 20.34 & 20.33 & 20.23 & 19.69 & 20.30 & 19.64 & 20.01 & 18.28 & 20.63 & 18.56 & 19.99 & 19.91 & 20.37 & 21.93 & 19.80 & 27.84 \\ 
+  L$\backslash$\_at$\backslash$\_Amax$\backslash$\_Fem$\backslash$\_GP$\backslash$\_1 & 49.66 & 48.99 & 49.14 & 49.64 & 49.64 & 49.43 & 49.25 & 49.62 & 50.62 & 49.65 & 49.59 & 50.02 & 54.55 & 49.02 & 48.92 & 47.21 & 55.25 & 48.69 & 44.84 \\ 
+  VonBert$\backslash$\_K$\backslash$\_Fem$\backslash$\_GP$\backslash$\_1 & 0.21 & 0.23 & 0.22 & 0.21 & 0.22 & 0.22 & 0.22 & 0.22 & 0.21 & 0.22 & 0.24 & 0.21 & 0.18 & 0.23 & 0.23 & 0.25 & 0.14 & 0.24 & 0.28 \\ 
+  CV$\backslash$\_young$\backslash$\_Fem$\backslash$\_GP$\backslash$\_1 & 0.12 & 0.12 & 0.12 & 0.12 & 0.12 & 0.12 & 0.12 & 0.12 & 0.14 & 0.12 & 0.15 & 0.12 & 0.13 & 0.12 & 0.12 & 0.14 & 0.10 & 0.11 & 0.09 \\ 
+  CV$\backslash$\_old$\backslash$\_Fem$\backslash$\_GP$\backslash$\_1 & 0.07 & 0.07 & 0.08 & 0.07 & 0.07 & 0.07 & 0.08 & 0.07 & 0.06 & 0.07 & 0.06 & 0.07 & 0.08 & 0.07 & 0.07 & 0.06 & 0.08 & 0.07 & 0.08 \\ 
+  NatM$\backslash$\_p$\backslash$\_1$\backslash$\_Mal$\backslash$\_GP$\backslash$\_1 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 \\ 
+  NatM$\backslash$\_p$\backslash$\_2$\backslash$\_Mal$\backslash$\_GP$\backslash$\_1 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 & 0.17 \\ 
+  L$\backslash$\_at$\backslash$\_Amin$\backslash$\_Mal$\backslash$\_GP$\backslash$\_1 & 17.47 & 17.32 & 16.72 & 17.49 & 17.48 & 17.43 & 16.72 & 17.43 & 18.80 & 16.57 & 15.84 & 17.50 & 18.92 & 17.35 & 17.30 & 17.09 & 18.20 & 15.86 & 21.18 \\ 
+  L$\backslash$\_at$\backslash$\_Amax$\backslash$\_Mal$\backslash$\_GP$\backslash$\_1 & 43.27 & 43.24 & 43.45 & 43.27 & 43.27 & 43.27 & 43.46 & 43.22 & 43.11 & 43.31 & 44.75 & 43.28 & 47.23 & 43.27 & 43.23 & 42.99 & 43.54 & 43.09 & 41.72 \\ 
+  VonBert$\backslash$\_K$\backslash$\_Mal$\backslash$\_GP$\backslash$\_1 & 0.34 & 0.35 & 0.33 & 0.34 & 0.34 & 0.34 & 0.33 & 0.34 & 0.33 & 0.35 & 0.32 & 0.34 & 0.24 & 0.34 & 0.35 & 0.35 & 0.33 & 0.37 & 0.54 \\ 
+  CV$\backslash$\_young$\backslash$\_Mal$\backslash$\_GP$\backslash$\_1 & 0.14 & 0.14 & 0.17 & 0.14 & 0.14 & 0.14 & 0.17 & 0.14 & 0.12 & 0.17 & 0.18 & 0.14 & 0.12 & 0.14 & 0.14 & 0.18 & 0.10 & 0.15 & 0.13 \\ 
+  CV$\backslash$\_old$\backslash$\_Mal$\backslash$\_GP$\backslash$\_1 & 0.07 & 0.06 & 0.06 & 0.07 & 0.07 & 0.07 & 0.06 & 0.07 & 0.07 & 0.06 & 0.06 & 0.07 & 0.08 & 0.06 & 0.06 & 0.06 & 0.07 & 0.07 & 0.07 \\ 
+  Wtlen$\backslash$\_2$\backslash$\_Fem & 2.88 & 2.88 & 2.88 & 2.88 & 2.88 & 2.88 & 2.88 & 2.88 & 2.88 & 2.88 & 2.88 & 2.88 & 2.88 & 2.88 & 2.88 & 2.88 & 2.88 & 2.88 & 2.88 \\ 
+  Mat50\%$\backslash$\_Fem & 43.69 & 43.69 & 43.69 & 43.69 & 43.69 & 43.69 & 43.69 & 43.69 & 43.69 & 43.69 & 43.69 & 43.69 & 43.69 & 43.69 & 43.69 & 43.69 & 43.69 & 43.69 & 43.69 \\ 
+  Eggs/kg$\backslash$\_inter$\backslash$\_Fem & 0.27 & 0.27 & 0.27 & 0.27 & 0.27 & 0.27 & 0.27 & 0.27 & 0.27 & 0.27 & 0.27 & 0.27 & 0.27 & 0.27 & 0.27 & 0.27 & 0.27 & 0.27 & 0.27 \\ 
+  Eggs/kg$\backslash$\_slope$\backslash$\_wt$\backslash$\_Fem & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 \\ 
+  Wtlen$\backslash$\_2$\backslash$\_Mal & 2.89 & 2.89 & 2.89 & 2.89 & 2.89 & 2.89 & 2.89 & 2.89 & 2.89 & 2.89 & 2.89 & 2.89 & 2.89 & 2.89 & 2.89 & 2.89 & 2.89 & 2.89 & 2.89 \\ 
+  SR$\backslash$\_LN(R0) & 8.21 & 8.21 & 7.73 & 8.21 & 8.21 & 8.21 & 7.74 & 8.21 & 8.21 & 8.21 & 8.17 & 8.20 & 8.30 & 8.21 & 8.21 & 8.22 & 8.20 & 8.21 & 8.03 \\ 
+  SR$\backslash$\_BH$\backslash$\_steep & 0.77 & 0.77 & 0.77 & 0.77 & 0.77 & 0.77 & 0.77 & 0.77 & 0.77 & 0.77 & 0.77 & 0.77 & 0.77 & 0.77 & 0.77 & 0.77 & 0.77 & 0.77 & 0.77 \\ 
+  SR$\backslash$\_sigmaR & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 & 0.50 \\ 
+  Q$\backslash$\_extraSD$\backslash$\_6$\backslash$\_Onboard & 0.24 & 0.08 & 0.23 & 0.24 & 0.24 & 0.24 & 0.50 & 0.24 & 0.24 & 0.24 & 0.24 & 0.24 & 0.21 & 0.24 & 0.24 & 0.24 & 0.24 & 0.24 & 0.24 \\ 
+  Q$\backslash$\_extraSD$\backslash$\_8$\backslash$\_MRFSS & 0.20 & 0.20 & 0.27 & 0.04 & 0.20 & 0.20 & 0.50 & 0.20 & 0.20 & 0.20 & 0.21 & 0.20 & 0.21 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 \\ 
+  Q$\backslash$\_extraSD$\backslash$\_9$\backslash$\_ORBS & 0.16 & 0.16 & 0.14 & 0.16 & 0.33 & 0.16 & 0.50 & 0.16 & 0.16 & 0.16 & 0.16 & 0.16 & 0.13 & 0.16 & 0.16 & 0.16 & 0.16 & 0.16 & 0.16 \\ 
+  Q$\backslash$\_extraSD$\backslash$\_10$\backslash$\_CommLog & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 4.36 & 0.50 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+  LnQ$\backslash$\_base$\backslash$\_7$\backslash$\_Tag & -1.39 & -1.39 & -1.39 & -1.39 & -1.39 & -1.39 & -1.39 & -1.39 & -1.39 & -1.39 & -1.39 & -1.39 & -1.39 & -1.39 & -1.39 & -1.39 & -1.39 & -1.39 & -1.39 \\ 
+  SizeSel$\backslash$\_1P$\backslash$\_1$\backslash$\_Trawl & 49.21 & 59.84 & 48.40 & 48.25 & 48.25 & 48.42 & 48.35 & 47.84 & 48.98 & 48.88 & 49.91 & 48.25 & 59.95 & 54.16 & 59.86 & 59.97 & 48.42 & 59.89 & 59.98 \\ 
+  SizeSel$\backslash$\_1P$\backslash$\_3$\backslash$\_Trawl & 5.06 & 5.71 & 4.99 & 5.07 & 5.07 & 5.19 & 5.01 & 4.68 & 4.79 & 5.28 & 5.62 & 5.05 & 6.37 & 5.32 & 5.71 & 5.55 & 5.28 & 5.71 & 5.43 \\ 
+  SizeSel$\backslash$\_1P$\backslash$\_4$\backslash$\_Trawl & 2.20 & 2.20 & 2.20 & 2.20 & 2.20 & 2.20 & 2.20 & 2.20 & 2.20 & 2.20 & 2.20 & 2.20 & 2.20 & 2.20 & 2.20 & 2.20 & 2.20 & 2.20 & 2.20 \\ 
+  SizeSel$\backslash$\_1P$\backslash$\_6$\backslash$\_Trawl & 5.00 & 5.00 & 5.00 & 5.00 & 5.00 & 5.00 & 5.00 & 5.00 & 5.00 & 5.00 & 5.00 & 5.00 & 5.00 & 5.00 & 5.00 & 5.00 & 5.00 & 5.00 & 5.00 \\ 
+  SzSel$\backslash$\_1Fem$\backslash$\_Peak$\backslash$\_Trawl & -2.53 & 14.77 & -2.09 & -3.10 & -3.10 & -2.34 & -2.12 & -1.33 & -4.16 & -3.02 & -4.00 & -3.24 & -11.18 & 14.98 & 14.72 & 9.70 & -3.18 & 14.49 & 2.78 \\ 
+  SzSel$\backslash$\_1Fem$\backslash$\_Ascend$\backslash$\_Trawl & -0.64 & 0.92 & -0.60 & -0.81 & -0.81 & -0.69 & -0.61 & -0.43 & -0.85 & -0.81 & -1.00 & -0.84 & -1.50 & 1.16 & 0.91 & 0.59 & -0.83 & 0.89 & 0.09 \\ 
+  SzSel$\backslash$\_1Fem$\backslash$\_Descend$\backslash$\_Trawl & -6.85 & 0.00 & -2.35 & 1.86 & 1.87 & -2.18 & -14.61 & -4.21 & -8.07 & -1.67 & -0.82 & 1.73 & -7.38 & 0.00 & 0.00 & 0.00 & -1.70 & 0.00 & 0.00 \\ 
+  SzSel$\backslash$\_1Fem$\backslash$\_Final$\backslash$\_Trawl & -5.08 & 0.00 & -11.72 & -10.00 & -9.98 & -10.85 & -12.02 & -12.39 & -5.71 & -10.96 & -9.96 & -10.31 & -12.41 & 0.02 & 0.00 & 0.00 & -13.48 & 0.00 & -0.01 \\ 
+  SizeSel$\backslash$\_2P$\backslash$\_1$\backslash$\_Live & 38.15 & 38.01 & 40.42 & 38.15 & 38.15 & 38.11 & 40.38 & 38.13 & 39.68 & 37.77 & 37.68 & 38.24 & 16.89 & 38.04 & 37.99 & 37.74 & 38.95 & 37.80 & 37.51 \\ 
+  SizeSel$\backslash$\_2P$\backslash$\_2$\backslash$\_Live & -2.47 & -2.51 & -2.43 & -2.48 & -2.48 & -2.49 & -2.45 & -2.43 & -5.98 & -2.48 & -3.83 & -2.43 & -1.38 & -2.51 & -2.51 & -2.41 & -2.61 & -2.43 & -0.45 \\ 
+  SizeSel$\backslash$\_2P$\backslash$\_3$\backslash$\_Live & 3.38 & 3.36 & 3.75 & 3.38 & 3.38 & 3.38 & 3.75 & 3.38 & -2.89 & 3.30 & 3.29 & 3.40 & -3.90 & 3.36 & 3.36 & 3.31 & 3.50 & 3.32 & 3.38 \\ 
+  SizeSel$\backslash$\_2P$\backslash$\_4$\backslash$\_Live & 3.60 & 3.65 & 3.30 & 3.61 & 3.61 & 3.63 & 3.31 & 3.59 & -1.55 & 3.78 & 3.77 & 3.57 & 0.25 & 3.65 & 3.66 & 3.70 & 3.40 & 3.71 & 0.91 \\ 
+  SizeSel$\backslash$\_2P$\backslash$\_6$\backslash$\_Live & -3.25 & -2.82 & -2.34 & -3.27 & -3.26 & -3.15 & -2.42 & -3.21 & -4.98 & -4.03 & -2.59 & -3.49 & -4.99 & -2.83 & -2.79 & -1.17 & -4.98 & -2.87 & 0.58 \\ 
+  SizeSel$\backslash$\_3P$\backslash$\_1$\backslash$\_Dead & 41.09 & 40.96 & 41.55 & 41.08 & 41.08 & 41.03 & 41.53 & 41.13 & 42.03 & 47.34 & 39.43 & 41.15 & 50.00 & 40.95 & 40.94 & 40.71 & 41.97 & 40.78 & 40.21 \\ 
+  SizeSel$\backslash$\_3P$\backslash$\_2$\backslash$\_Dead & -3.72 & -4.33 & -2.42 & -3.70 & -3.71 & -3.83 & -2.48 & -3.70 & -4.02 & -8.69 & -9.73 & -3.46 & 1.65 & -4.29 & -4.34 & -9.31 & -3.44 & -3.97 & -0.70 \\ 
+  SizeSel$\backslash$\_3P$\backslash$\_3$\backslash$\_Dead & 3.89 & 3.87 & 3.85 & 3.88 & 3.88 & 3.88 & 3.85 & 3.89 & 4.01 & 5.37 & 3.52 & 3.89 & 6.41 & 3.86 & 3.87 & 3.82 & 3.97 & 3.87 & 3.98 \\ 
+  SizeSel$\backslash$\_3P$\backslash$\_4$\backslash$\_Dead & 0.13 & 0.53 & 5.85 & 0.13 & 0.14 & 0.27 & 5.85 & 0.01 & -1.44 & 1.38 & 1.95 & -0.18 & 2.02 & 0.49 & 0.53 & -1.96 & -1.96 & 0.49 & 1.32 \\ 
+  SizeSel$\backslash$\_3P$\backslash$\_6$\backslash$\_Dead & 0.26 & 0.33 & 3.53 & 0.26 & 0.26 & 0.27 & 3.56 & 0.34 & 0.32 & -4.07 & -0.93 & 0.29 & 3.93 & 0.35 & 0.34 & 0.81 & -0.36 & 0.42 & -3.19 \\ 
+  SzSel$\backslash$\_3Fem$\backslash$\_Peak$\backslash$\_Dead & -2.12 & -2.09 & -1.44 & -2.10 & -2.10 & -2.08 & -1.46 & -2.16 & -2.96 & -3.92 & -1.05 & -2.09 & -0.83 & -2.05 & -2.09 & -1.93 & -2.56 & -1.98 & -0.95 \\ 
+  SzSel$\backslash$\_3Fem$\backslash$\_Ascend$\backslash$\_Dead & -0.35 & -0.34 & -0.18 & -0.35 & -0.35 & -0.34 & -0.19 & -0.36 & -0.46 & -0.51 & -0.11 & -0.35 & 3.02 & -0.33 & -0.34 & -0.31 & -0.43 & -0.34 & -0.25 \\ 
+  SzSel$\backslash$\_3Fem$\backslash$\_Descend$\backslash$\_Dead & 3.44 & 3.16 & -2.74 & 3.44 & 3.43 & 3.33 & -2.71 & 3.56 & 4.96 & 0.76 & 1.92 & 3.68 & 0.25 & 3.19 & 3.16 & 5.41 & 5.35 & 3.21 & -5.95 \\ 
+  SzSel$\backslash$\_3Fem$\backslash$\_Final$\backslash$\_Dead & -12.32 & -13.04 & -14.95 & -12.52 & -12.52 & -12.79 & -14.95 & -12.65 & -10.86 & -10.98 & -9.51 & -12.65 & 4.83 & -13.19 & -13.12 & -1.85 & -11.02 & -13.51 & 3.44 \\ 
+  SizeSel$\backslash$\_4P$\backslash$\_1$\backslash$\_RecO & 38.39 & 38.28 & 39.90 & 38.40 & 38.39 & 38.36 & 39.89 & 38.40 & 38.67 & 38.02 & 40.27 & 38.47 & 35.00 & 38.32 & 38.27 & 38.27 & 39.70 & 38.13 & 37.77 \\ 
+  SizeSel$\backslash$\_4P$\backslash$\_2$\backslash$\_RecO & -4.24 & -4.23 & -3.83 & -4.24 & -4.24 & -4.23 & -3.84 & -4.24 & -4.23 & -4.28 & -1.66 & -4.25 & -1.02 & -4.26 & -4.23 & -4.50 & -4.09 & -4.17 & -4.12 \\ 
+  SizeSel$\backslash$\_4P$\backslash$\_3$\backslash$\_RecO & 3.79 & 3.79 & 3.94 & 3.79 & 3.79 & 3.79 & 3.94 & 3.80 & 3.83 & 3.74 & -1.80 & 3.80 & -0.73 & 3.79 & 3.79 & 3.80 & 3.93 & 3.77 & 3.87 \\ 
+  SizeSel$\backslash$\_5P$\backslash$\_1$\backslash$\_RecS & 29.45 & 29.41 & 29.80 & 29.45 & 29.45 & 29.44 & 29.79 & 29.44 & 29.40 & 29.47 & 29.24 & 39.65 & 15.01 & 29.42 & 29.40 & 29.46 & 29.34 & 29.32 & 28.65 \\ 
+  SizeSel$\backslash$\_5P$\backslash$\_2$\backslash$\_RecS & -8.77 & -8.76 & -8.61 & -8.77 & -8.77 & -8.76 & -8.62 & -8.77 & -8.84 & -8.74 & -8.86 & -5.82 & -4.38 & -8.75 & -8.75 & -8.61 & -8.94 & -8.71 & -8.88 \\ 
+  SizeSel$\backslash$\_5P$\backslash$\_3$\backslash$\_RecS & 4.14 & 4.13 & 4.19 & 4.14 & 4.14 & 4.14 & 4.19 & 4.14 & 4.12 & 4.14 & 4.08 & -2.80 & 9.03 & 4.13 & 4.13 & 4.15 & 4.14 & 4.12 & 4.11 \\ 
+  SizeSel$\backslash$\_5P$\backslash$\_4$\backslash$\_RecS & 3.53 & 3.51 & 3.39 & 3.53 & 3.53 & 3.52 & 3.40 & 3.53 & 3.59 & 3.50 & 3.65 & -1.46 & -1.31 & 3.51 & 3.51 & 3.39 & 3.87 & 3.49 & 3.25 \\ 
+  SizeSel$\backslash$\_5P$\backslash$\_6$\backslash$\_RecS & -1.83 & -1.84 & -1.42 & -1.83 & -1.83 & -1.83 & -1.44 & -1.83 & -1.82 & -1.89 & -2.18 & -4.98 & -5.00 & -1.83 & -1.84 & -1.77 & -1.95 & -1.87 & -1.83 \\ 
+  AgeSel$\backslash$\_4Fem$\backslash$\_Peak$\backslash$\_RecO & -3.89 & -3.87 & -1.34 & -3.88 & -3.89 & -3.88 & -1.65 & -3.89 & -3.85 & -3.79 & 0.48 & -3.88 & 5.48 & -3.85 & -3.86 & -3.37 & -2.54 & -3.87 & 9.64 \\ 
+  AgeSel$\backslash$\_4Fem$\backslash$\_Descend$\backslash$\_RecO & 3.26 & 3.34 & 3.44 & 3.27 & 3.27 & 3.29 & 3.45 & 3.27 & 3.10 & 3.27 & 3.22 & 3.24 & 1.27 & 3.33 & 3.35 & 3.53 & -8.92 & 3.38 & -1.80 \\ 
+  AgeSel$\backslash$\_4Fem$\backslash$\_Final$\backslash$\_RecO & -9.33 & -9.27 & -12.75 & -9.30 & -9.30 & -9.28 & -12.80 & -9.33 & -9.43 & -9.18 & -12.34 & -9.36 & -11.85 & -9.33 & -9.25 & -9.53 & -8.82 & -9.12 & -11.53 \\ 
+  Derived quantitites &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\ 
+  \$SB\_0\$ & 1385 & 1319 & 802 & 1382 & 1382 & 1361 & 813 & 1381 & 1492 & 1396 & 1420 & 1404 & 2290 & 1316 & 1310 & 1061 & 2053 & 1299 & 800 \\ 
+  \$SB\_\{2015\}\$ & 836 & 795 & 198 & 834 & 834 & 821 & 206 & 833 & 920 & 842 & 851 & 853 & 1249 & 792 & 790 & 622 & 1341 & 782 & 441 \\ 
+  \$SB\_\{2015\}/SB\_0\$ & 60\% & 60\% & 25\% & 60\% & 60\% & 60\% & 25\% & 60\% & 62\% & 60\% & 60\% & 61\% & 55\% & 60\% & 60\% & 59\% & 65\% & 60\% & 55\% \\ 
+  Yield at \$SPR\_\{50$\backslash$\%\}\$ & 518 & 517 & 309 & 517 & 517 & 517 & 311 & 517 & 531 & 519 & 523 & 519 & 424 & 516 & 517 & 504 & 562 & 517 & 476 \\ 
+   \hline
+\hline
+\label{tab:blck_sens}
+\end{longtable}
+\end{landscape}
+
+\end{document}

@@ -1,0 +1,115 @@
+---
+title: "black_rockfish_sensitivity_table"
+output:
+  pdf_document:
+    fig_caption: yes
+    includes:
+      in_header: header.tex
+    keep_tex: yes
+    number_sections: yes
+    toc: yes
+    toc_depth: 4
+  html_document:
+    toc: yes
+    toc_depth: '4'
+documentclass: article
+fontsize: 12pt
+geometry: margin=1in
+link-citations: yes
+---
+
+```{r global_options, include=FALSE}
+    # set global options for R code chunks: echo=FALSE (don't include source code); 
+    # warning=FALSE (suppress R warnings); message=FALSE (suppress R messages)
+    # eval = TRUE is default
+     knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+      library(xtable)
+      options(xtable.comment = FALSE)  # turns off xtable comments
+```
+
+\begin{landscape}
+\tiny
+```{r, results='asis'}
+    # read in sensitivity table
+  blck_sens = read.csv('black_rockfish_sens.csv')
+    colnames(blck_sens) = c('','',
+                            '1','2','3','4','5',
+                            '6','7','8','9','10',
+                            '11','12','13','14',
+                            '15','16','17','18')
+
+
+
+
+  black_sens_tab = xtable(blck_sens,
+                          caption=c('One of the black rockfish sensitivity
+                                    tables.'),
+                   label = 'tab:blck_sens')
+  
+  # Add "continued on next page"" footnote   
+    # addtorow          <- list()
+    # addtorow$pos      <- list()
+    # addtorow$pos[[1]] <- c(0)
+    # addtorow$command  <- c(paste("\\hline \n",
+    #                              "\\endhead \n",
+    #                              "\\hline \n",
+    #                              "\\multicolumn{3}{l}",
+    #                              "{\\footnotesize Continued on next page} \n",
+    #                              "\\endfoot \n",
+    #                              "\\endlastfoot \n",sep=""))
+    # 
+    
+     # Code to create multi-column row above the column names
+   addtorow <- list()
+   addtorow$pos <- list()
+   addtorow$pos[[1]] <- -1
+  # addtorow$pos[[2]] <- -1
+  # addtorow$pos[[3]] <- -1
+   addtorow$command <- c('&  \\multicolumn{1}{c}{Base case} 
+                          &  \\multicolumn{6}{c}{Index removal} 
+                          &  \\multicolumn{6}{c}{Length comp removal}
+                          &  \\multicolumn{6}{c}{Age comp removal} \\\\\n') #,
+                      #  ' &  \\multicolumn{3}{c}{Stephens MacCall}
+                       #   &  \\multicolumn{3}{c}{retain all positive records}
+                        #  &  \\multicolumn{3}{c}{Stephens-MacCall}  \\\\\n')
+    
+    
+  align(black_sens_tab) = c('l',
+                          'l|',
+                          'l|',
+                          'l',
+                          'l',
+                          'l',
+                          'l',
+                          'l',
+                          'l|',
+                          'l',
+                          'l',
+                          'l',
+                          'l',
+                          'l',
+                          'l|',
+                          'l',
+                          'l',
+                          'l',
+                          'l',
+                          'l',
+                          'l')           
+           
+   
+  print(black_sens_tab,
+        include.rownames = FALSE, 
+        caption.placement = 'top',
+        tabular.environment = 'longtable',
+        floating = FALSE,
+        sanitize.text.function = function(x){x},
+        add.to.row = addtorow)
+
+
+  # If xtable comments are not turned off, you cannot make a landscape page!
+
+
+
+```
+\end{landscape}

@@ -39,9 +39,6 @@ link-citations: yes
                             '11','12','13','14',
                             '15','16','17','18')
 
-
-
-
   black_sens_tab = xtable(blck_sens,
                           caption=c('One of the black rockfish sensitivity
                                     tables.'),
@@ -66,8 +63,8 @@ link-citations: yes
    addtorow$pos[[1]] <- -1
   # addtorow$pos[[2]] <- -1
   # addtorow$pos[[3]] <- -1
-   addtorow$command <- c('&  \\multicolumn{1}{c}{Base case} 
-                          &  \\multicolumn{6}{c}{Index removal} 
+   addtorow$command <- c(' &  \\multicolumn{1}{c}{Base case} 
+                           &  \\multicolumn{6}{c}{Index removal} 
                           &  \\multicolumn{6}{c}{Length comp removal}
                           &  \\multicolumn{6}{c}{Age comp removal} \\\\\n') #,
                       #  ' &  \\multicolumn{3}{c}{Stephens MacCall}
@@ -103,7 +100,8 @@ link-citations: yes
         caption.placement = 'top',
         tabular.environment = 'longtable',
         floating = FALSE,
-        sanitize.text.function = function(x){x},
+       #sanitize.text.function = function(x){x},
+      
         add.to.row = addtorow)
 
 
@@ -112,4 +110,7 @@ link-citations: yes
 
 
 ```
+
 \end{landscape}
+
+

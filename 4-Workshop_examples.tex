@@ -128,7 +128,7 @@
 }
 Change some of the YAML settings to see what happens.
 
-Notice, the down arrow at line 22. If you click this, you can hide the R
+Notice, the down arrow at line 25. If you click this, you can hide the R
 code chunk. This is helpful when working through a large document.
 
 On the right side of the R code chunk are additional options, Settings,
@@ -140,19 +140,91 @@ variables in your Environment.
 \section{Epmhasis (R markdown and
 LaTeX)}\label{epmhasis-r-markdown-and-latex}
 
+\emph{Sebastes}\\
+\emph{Sebastes}
+
+\emph{Sebastes}
+
+\textbf{\emph{Sebastes}}\\
+\textbf{Sebastes}\\
+\emph{\textbf{Sebastes}}
+
 \section{Headers}\label{headers}
+
+\subsection{Subhead 2}\label{subhead-2}
+
+\subsubsection{Subhead 3}\label{subhead-3}
+
+\paragraph{Subhead 4}\label{subhead-4}
+
+\emph{Subhead 5}
 
 \section{Commenting}\label{commenting}
 
 \section{Links}\label{links}
 
+\href{www.github.com}{Github}
+
 \section{Lists}\label{lists}
+
+R Markdown are finicky with spacing\ldots{}
+
+\begin{itemize}
+\tightlist
+\item
+  Item 1
+\item
+  Item 2
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Item 2a
+  \item
+    Item 2b
+  \end{itemize}
+\item
+  Item 1
+\item
+  Item 2
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Item 2a
+  \item
+    Item 2b
+  \end{itemize}
+\end{itemize}
+
+Bulleted list
+
+\begin{itemize}[noitemsep,nolistsep,topsep=0pt]
+
+\item \href{https://git-scm.com/book/en/v2/Getting-Started-Installing-Git}{Git}
+
+\item \href{https://cran.r-project.org/bin/windows/base/}{R}
+
+\end{itemize}
+
+Numbered list
+
+\begin{enumerate}[noitemsep,nolistsep,topsep=0pt]
+
+\item \href{https://git-scm.com/book/en/v2/Getting-Started-Installing-Git}{Git}
+
+\item \href{https://cran.r-project.org/bin/windows/base/}{R} 
+
+\end{enumerate}
 
 \section{References and Citations}\label{references-and-citations}
 
 We can reference a document section, see Lists in Section \ref{lists}.
 
-Citations: (Love et al. \protect\hyperlink{ref-Love2002}{2002})
+Citations: (Love et al. \protect\hyperlink{ref-Love2002}{2002},
+\protect\hyperlink{ref-Love2002}{2002})
+
+Love (\protect\hyperlink{ref-Love2002}{2002})
 
 \section{Figure from a file}\label{figure-from-a-file}
 
@@ -162,6 +234,12 @@ You can use any file extension, including PDFs
 \centering
 \includegraphics{RMarkdownFLow.png}
 \caption{Here's my caption \label{fig:fig_example}}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{./Figures/RMarkdownFLow1.png}
+\caption{Here's my caption 2 \label{fig:fig_example2}}
 \end{figure}
 
 Figures are referenced using LaTeX syntax \ref{fig:fig_example}.
@@ -175,18 +253,67 @@ referencing it.
 
 You can embed an R code chunk like this:
 
-Play witht the r code chunk options, echo=TRUE, include=FALSE,
+\begin{verbatim}
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+\end{verbatim}
+
+Play with the r code chunk options, echo=TRUE, include=FALSE,
 results=`asis'
+
+\FloatBarrier
 
 \section{Figure from R code chunk}\label{figure-from-r-code-chunk}
 
 You can also embed plots, for example:
 
+\begin{figure}[htbp]
+\centering
+\includegraphics{4-Workshop_examples_files/figure-latex/pressure-1.pdf}
+\caption{Figure of something at \(40^\circ 10^\prime\).
+\label{fig:pressure}}
+\end{figure}
+
+This is inline math mode for Latex \(40^\circ 10^\prime\)
+
 Note, you need extra \textbackslash{}s when using LaTeX syntax within an
 R code chunk, or when inserting a backslash in R markdown. The same goes
-with percent signs and any other LaTeX reserved symbol.
+with percent signs and any other LaTeX reserved symbol. You can use a \%
+\(\%\)
+
+We can now reference Figure \ref{fig:pressure}. Note where this text
+ends up.
+
+Note that the \texttt{echo\ =\ FALSE} parameter was added to the code
+chunk to prevent printing of the R code that generated the plot.
+
+\FloatBarrier
 
 \section{Tables}\label{tables}
+
+\begin{table}[ht]
+\centering
+\caption{This is where you write your caption} 
+\label{tab:Table_example}
+\scalebox{0.7}{
+\begin{tabular}{crcrcrcrcrc}
+  \hline
+Sample & Test1 & Test2 & Test3 & Test4 & Test5 & Test6 & Test7 & Test8 & Test9 & Test10 \\ 
+  \hline
+1 & 333000000000 & 97 & 45 & 7169 & 5656 & 2642 & 8534 & 9173 & 230 & 2733 \\ 
+  3 & 345 & 976 & 6 & 105 & 6382 & 2277 & 5848 & 7339495403 & 8613 & 5025 \\ 
+  5 & 34 & 3333333333 & 7 & 2395 & 5632 & 5542 & 1645 & 380 & 1263 & 6728 \\ 
+  7 & 234 & 34 & 46 & 5619 & 6063 & 8973 & 9362 & 1870 & 7651 & 683 \\ 
+  9 & 234 & 0 & 45 & 6531 & 6824 & 3609 & 7627 & 3363 & 1534 & 8333 \\ 
+   \hline
+\end{tabular}
+}
+\end{table}
 
 Try changing the R chunk options above.
 
@@ -202,6 +329,16 @@ computer.
 Now, create a table!
 
 \section{Math mode}\label{math-mode}
+
+You can use LaTeX math mode both inline and for inserting equations.
+It's handy for using inline math mode for management measure and
+lat/long.
+
+Inline looks like this: \(SPR_{40\%}\)\\
+*Note the \% sign has a ~when used in math mode, but not in R markdown
+text.
+
+To get degrees and minutes type: \(40^\circ 10^\prime\)
 
 \section*{References}\label{references}
 \addcontentsline{toc}{section}{References}

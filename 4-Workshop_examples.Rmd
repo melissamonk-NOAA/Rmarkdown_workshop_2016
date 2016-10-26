@@ -1,37 +1,40 @@
 ---
-title: "Workshop Examples"  
+title: "Workshop Examples"
 author: "Melissa Monk"
 date: ''
 output:
   pdf_document:
-    fig_caption: yes    
+    fig_caption: yes
     includes:
       in_header: header.tex
     keep_tex: yes
     number_sections: yes
     toc: yes
     toc_depth: 4
+  html_document:
+    toc: yes
+    toc_depth: '4'
 documentclass: article
 fontsize: 12pt
 geometry: margin=1in
+link-citations: yes
 csl: CJFAS.csl
 bibliography: BibFile.bib
-link-citations: yes
 ---
 
 ```{r global_options, include=FALSE}
     # set global options for R code chunks: echo=FALSE (don't include source code); 
     # warning=FALSE (suppress R warnings); message=FALSE (suppress R messages)
     # eval = TRUE is default
-    # knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+     knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
       library(xtable)
-    # options(xtable.comment = FALSE)  # turns off xtable comments
+      options(xtable.comment = FALSE)  # turns off xtable comments
 ```
 
 Change some of the YAML settings to see what happens.
 
-Notice, the down arrow at line 22.  If you click this, you can hide the R code chunk.  This is helpful when working through a large document.
+Notice, the down arrow at line 25.  If you click this, you can hide the R code chunk.  This is helpful when working through a large document.
 
 On the right side of the R code chunk are additional options, Settings, a down arrow (run previous R code chunks), and a green play button (runs the current chunk).  It's handy to check R code chunks as you go and to debug.  Within the Assessment template, this is also the only way to see variables in your Environment. 
 
@@ -39,27 +42,42 @@ On the right side of the R code chunk are additional options, Settings, a down a
 
 # Epmhasis (R markdown and LaTeX)
 
+*Sebastes*  
+_Sebastes_
+
+\emph{Sebastes}
+
+**_Sebastes_**  
+__Sebastes__  
+\emph{\textbf{Sebastes}}  
 
 
 
 # Headers
 
+## Subhead 2
+### Subhead 3
+#### Subhead 4
 
+*Subhead 5*
 
 
 # Commenting
 
+<!-- comment here  -->
 
 
 
 # Links
 
+[Github](www.github.com)
 
 
 
 # Lists
-<!--
-R Markdown are finicky with spacing...
+
+R Markdown are finicky with spacing...     
+
 * Item 1
 * Item 2
     + Item 2a
@@ -71,9 +89,9 @@ R Markdown are finicky with spacing...
     + Item 2a
     + Item 2b
 
--->
 
-<!--
+
+
 Bulleted list
 \begin{itemize}[noitemsep,nolistsep,topsep=0pt]
 
@@ -82,10 +100,9 @@ Bulleted list
 \item \href{https://cran.r-project.org/bin/windows/base/}{R}
 
 \end{itemize}
--->
 
 
-<!--
+
 Numbered list
 \begin{enumerate}[noitemsep,nolistsep,topsep=0pt]
 
@@ -94,19 +111,23 @@ Numbered list
 \item \href{https://cran.r-project.org/bin/windows/base/}{R} 
 
 \end{enumerate}
--->
+
 
 # References and Citations
 
 We can reference a document section, see Lists in Section \ref{lists}.
 
-Citations: [@Love2002]
+Citations: [@Love2002;@Love2002]
+
+Love [-@Love2002]
 
 
 #Figure from a file
 You can use any file extension, including PDFs
 
 ![Here's my caption \label{fig:fig_example}](RMarkdownFLow.png)
+
+![Here's my caption 2 \label{fig:fig_example2}](./Figures/RMarkdownFLow1.png)
 
 Figures are referenced using LaTeX syntax \ref{fig:fig_example}.
 
@@ -121,54 +142,63 @@ Now try adding your own picture to the directory, adding it in here, and referen
 
 You can embed an R code chunk like this:
 
-```{r cars, echo=FALSE, include=F}
+```{r cars}
 summary(cars)
+
+#adsflkasjfaslkdfj
 ```
 
 
-Play witht the r code chunk options, echo=TRUE, include=FALSE, results='asis'
+Play with the r code chunk options, echo=TRUE, include=FALSE, results='asis'
 
 
-
+\FloatBarrier
 
 
 # Figure from R code chunk
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE, include=FALSE, fig.cap="Figure of something  at $40^\\circ 10^\\prime$. \\label{fig:pressure}"}
+```{r pressure, fig.cap="Figure of something  at $40^\\circ 10^\\prime$. \\label{fig:pressure}"}
 plot(pressure)
 ```
 
-Note, you need extra \\s when using LaTeX syntax within an R code chunk, or when inserting a backslash in R markdown.  The same goes with percent signs and any other LaTeX reserved symbol.
+This is inline math mode for Latex  $40^\circ 10^\prime$  
+
+Note, you need extra \\s when using LaTeX syntax within an R code chunk, or when inserting a backslash in R markdown.  The same goes with percent signs and any other LaTeX reserved symbol. You can use  a %  $\%$ 
 
 
-
-<!--
 We can now reference Figure \ref{fig:pressure}.  Note where this text ends up.
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
--->
+\FloatBarrier
 
 
 #Tables
 
-```{r, results='asis', echo=FALSE, include=FALSE}
+
+
+```{r, results='asis'}
 #, results='asis', echo=FALSE, include=FALSE, message=FALSE, warning=FALSE
 Tab = read.csv('Table_example.csv')
 
 Tab_example = xtable(Tab, 
                    caption=c('This is where you write your caption'),
-                   label = 'tab:Table_example')
+                   label = 'tab:Table_example',
+                   digits=0)  
 
-print(Tab_example, include.rownames = FALSE, caption.placement = 'top')
+align(Tab_example) = 'lcrcrcrcrcrc'
+
+print(Tab_example, include.rownames = FALSE, caption.placement = 'top', scalebox=.7)
 
 # print option to try, scalebox = 0.7
 # add alignment
 
 
 ```
+
+
 
 
 
@@ -188,8 +218,11 @@ Now, create a table!
 
 
 
+
+
+
 #Math mode
- <!--
+
 You can use LaTeX math mode both inline and for inserting equations. It's handy for using inline math mode for management measure and lat/long.
 
 Inline looks like this:  $SPR_{40\%}$  
@@ -197,7 +230,7 @@ Inline looks like this:  $SPR_{40\%}$
 
 To get degrees and minutes type: $40^\circ 10^\prime$   
 
--->
+
 
 #References
 
